@@ -1,16 +1,14 @@
 gestionar_tareas = []
 
+gestionar_tareas.insert(0, {"nombre": "dormir", "descripcion": "Descripción dormir", "estado": "falta siesta"})
+gestionar_tareas.insert(1, {"nombre": "comer", "descripcion": "Descripción comer", "estado": "listo"})
+gestionar_tareas.insert(2, {"nombre": "estudiar", "descripcion": "Descripción estudiar", "estado": "estoy en eso"})
 
-gestionar_tareas.insert(0, {"nombre": "estudiar", "descripcion": "Descripción de la Tarea 1", "estado": "lista"})
-gestionar_tareas.insert(1, {"nombre": "comer", "descripcion": "Descripción de la Tarea 2", "estado": "ya comi"})
-gestionar_tareas.insert(2, {"nombre": "dormir", "descripcion": "Descripción de la Tarea 3", "estado": "pendiente la siesta"})
+tarea_eliminada = gestionar_tareas.pop(1)
 
-
-tarea_eliminada = gestionar_tareas.pop(1)  
-
-for i, gestionar_tareas in enumerate(gestionar_tareas):
+for i, tarea in enumerate(gestionar_tareas):
     print(f"Tarea {i+1}:")
-    print(f"  Nombre: {gestionar_tareas['nombre']}")
-    print(f"  Descripción: {gestionar_tareas['descripcion']}")
-    print(f"  Estado: {gestionar_tareas['estado']}")
-    print() 
+    print(f"  Nombre: {tarea['nombre']}")
+    print(f"  Descripción: {tarea['descripcion']}")
+    print(f"  Estado: {tarea['estado']}")
+print() 
