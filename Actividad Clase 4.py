@@ -1,14 +1,22 @@
-gestionar_tareas = []
+def calcular():
+    num1 = float(input("Ingrese el primer número: "))
+    num2 = float(input("Ingrese el segundo número: "))
+    operacion = input("Ingrese la operación (+, -, *, /): ")
 
-gestionar_tareas.insert(0, {"nombre": "dormir", "descripcion": "Descripción dormir", "estado": "falta siesta"})
-gestionar_tareas.insert(1, {"nombre": "comer", "descripcion": "Descripción comer", "estado": "listo"})
-gestionar_tareas.insert(2, {"nombre": "estudiar", "descripcion": "Descripción estudiar", "estado": "estoy en eso"})
+    if operacion == "+":
+        resultado = num1 + num2
+    elif operacion == "-":
+        resultado = num1 - num2
+    elif operacion == "*":
+        resultado = num1 * num2
+    elif operacion == "/":
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            resultado = "Error: división por cero"
+    else:
+        resultado = "Operación no válida"
 
-tarea_eliminada = gestionar_tareas.pop(1)
+    print("Resultado:", resultado)
 
-for i, tarea in enumerate(gestionar_tareas):
-    print(f"Tarea {i+1}:")
-    print(f"  Nombre: {tarea['nombre']}")
-    print(f"  Descripción: {tarea['descripcion']}")
-    print(f"  Estado: {tarea['estado']}")
-print() 
+calcular()
